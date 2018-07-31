@@ -10,6 +10,7 @@ if __name__ == '__main__':
     #     raise ValueError('Please check your parameter')
 
     # imageURL = str(sys.argv[1])
+
     imageURL = 'https://s3.us-east-2.amazonaws.com/recycle.buddy/IMG_3862.jpg'
     model = RBA.RecycleBuddyAnnotator()
     starttime = datetime.datetime.now()

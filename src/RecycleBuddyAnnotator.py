@@ -18,6 +18,7 @@ class RecycleBuddyAnnotator:
     '''
 
     def __init__(self):
+
         self.client = vision.ImageAnnotatorClient()
         print('Google client successfully initiated')
         self.image = vision.types.Image()
