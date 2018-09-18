@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "canvas-hybrid-212616",
+  "private_key_id": "185833fcb403cb75c9f4e65d7feeb6a5759dda96",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDpjaqDvGZDvG3Z\narMsZX4KT3yO4LCTM2BqSSf5vb2kZatTjF32HrWyUvxvMl1V3pwTRwIc4hrWDq2o\nPFi69hCsuJwvXKk0Jy728MDvB8l6jkyr4L/xon0bGuq1esVW72M77jF/LutyLOKI\n9KqUPdnZhVVGd9k9WKBekr5ukAq18C2lALHmRvIyzJTgGSmdsoLxAd0w6Sykn+bL\n+m5w2lGyTVvuW1/8v29GKirOdigZd4xhCIZnzD0Son7zr2hF+5pQxcjb6drgA10Y\nsTvEGif93HaAHLfS7W3U7vEaR9YSNtQ0TFSFEHFGCqzysdjmYCuI/87h7+F6HaWP\nego6QeZLAgMBAAECggEAFDqxjMSKRQ6yoxTTXSKTVrhIzSVYFf/qt3oLrN2K6gzm\nWI+9ab6CNWZruAPwQqpL8X2CiNbqxSSzVPGZK+R5UESTPqTzgPFt53S1+V4+zM87\ng92tMnRFCs57iumN4zhL65p3jhEV0qdhncQ3bCypTGZ4muhxmBcvmNF0DiaKzvRK\n2niRNFiAlzCsqzED44AHSBbyTYG9CEh978+evrzVdhjw/BzPqa5XAPcBGr9iNYE+\nkCH7Z86pXxCtdOdUmDWDFxx8wPqklF01ZzNEE9HoXRn4GopB5eYHY6wfA4GNJM3n\naPO8d+2ASkjenUM4BeBJInwO6b1o15LsiDZVt8hVFQKBgQD4nQcDtcp5ST5c0exm\n3DbYUpXg1rH8TYSIKPBGymSMJwRytEtZ98sbSJd6vHiGdiVXZfGCYrtPrvqeQGBN\nl10nHO7x6vZIHhMWKXRRu6LCWCFIVbmLJ2w9FCg3e3NCFYVvFYn8FQhXkwswdcA2\n5JYoTVVW1gFoqLXlhTgPwOSw5wKBgQDwfhdTGE3jhAzQ5jWkOT6/pt4RCDPfUgJ8\n86ZwsXXgHCrN5RWO5I0czJLMIe7598UGIRsM3lil4Db+9Sl4SBscSu0Oey6gcc8B\nTpcqbfAjpU9uc+GWaxAGqtXkabOmTa/rbdrWXfLZa97z1aMU2GXIB4vUTdm+4PmG\nfRVyc9we/QJ/W0lNSg92SRKb03lBVIOHn+azIduzfvD3uQdPMq8ePFgXSgbppB9Y\ndKwy8t5BYx3+mBjWlQmrvZaCb5kzw0nQ6ou1MR8VT2W7nGecTmaXXMT/c5AGkRHo\nrIS6P6UUrS85z5AZGnaemYlkkmaqLX3BpQrASyJJYiSQpbZE34P0dQKBgQDiMxcp\nNzD7kFalngJSRu24QfGZP4fawz5H3LxuPtxKQPQZ2SEf1+TKc7iXfEtUnjGZBEZ3\nIiNrUasov9uToO6u++JgvogqrSExb4RLikBWpsRBdYl3e5gFTWYFg05QW73dyOQO\nwSsMSaPY4NaVYrzJGh/xPpBSMzU/xCMKFeOy2QKBgQDlq9MwiYkthYngeiAKG8pU\nOXPsV1ccKDKux2r9BCB6j1KjiI5jBTvvgnAywF0dMdkA917jDRH9XAQUcQsIBkbp\nmz1dHN/SHg/J0IJ1rvf33l1OjoegFrJEMkfbt7PkU8kdYOdKsiZPQX0zRg5218Bh\nuA3Fh/r5zrzkm7AUuxjsCQ==\n-----END PRIVATE KEY-----\n",
+  "client_email": "recycle-app-test@canvas-hybrid-212616.iam.gserviceaccount.com",
+  "client_id": "106086633573721132661",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/recycle-app-test%40canvas-hybrid-212616.iam.gserviceaccount.com"
+}
