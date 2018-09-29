@@ -1,7 +1,7 @@
 # Recycle Buddy Service
 
-    Java part of Back End
+This is a transition layer between front-end and Google AutoML model for Recycle Buddy project.
 
-    Connects Frond-End with Machine Learning
+Project uses Maven, Spring Boot, Jackson.
 
-TODO
+For connection to Google Cloud you need to set environment variable GOOGLE_APPLICATION_CREDENTIONLS to key file from service account.
