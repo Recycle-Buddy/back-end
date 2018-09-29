@@ -1,23 +1,17 @@
 package com.recycle.buddy.model;
+/*
+ Class for keeping data from JSON file with base64 encoded image, that is received from Front-end.
+*/
 
 public class Image {
 
-    private String id;
-    private String base64;
+    private String imageBase64;
 
-    public String getId() {
-        return id;
+    public String getImageBytes() {
+        return imageBase64;
     }
 
-    public void setId(final String id) {
-        this.id = id;
-    }
-
-    public String getBase64() {
-        return base64;
-    }
-
-    public void setBase64(final String base64) {
-        this.base64 = base64;
+    public void setImageBytes(final String imageBase64) {
+        this.imageBase64 = imageBase64;
     }
 }

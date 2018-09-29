@@ -10,6 +10,7 @@
     <name>recycle-buddy-service</name>
     <description>Recycle buddy service</description>
 
+
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
@@ -42,6 +43,25 @@
             <artifactId>junit</artifactId>
             <scope>test</scope>
         </dependency>
+
+        <!--Machine Learning Google API-->
+
+
+        <dependency>
+            <groupId>com.google.cloud</groupId>
+            <artifactId>google-cloud-automl</artifactId>
+            <version>0.62.0-beta</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.google.cloud/google-cloud-storage -->
+        <dependency>
+            <groupId>com.google.cloud</groupId>
+            <artifactId>google-cloud-storage</artifactId>
+            <version>1.45.0</version>
+        </dependency>
+
+
+
     </dependencies>
 
 </project>

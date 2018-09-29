@@ -21,6 +21,6 @@ public class RecycleBuddyController {
 
     @RequestMapping(value = "/recognize", method = RequestMethod.POST)
     public String recognize(@RequestBody final Image image) {
-        return imageRecognitionService.recognize(image.getBase64());
+        return imageRecognitionService.recognize(image.getImageBytes());
     }
 }
