@@ -33,20 +33,16 @@ public class ImageRecognitionService {
     public String recognize(final String imageBase64) {
         LOG.info(imageBase64);
         PredictResponse response = PredictResponse.getDefaultInstance();
-        try {
-            response = predictResponse(GCP_PROJECT_ID,GCP_LOCATION,AUTOML_MODEL_ID, imageBase64);
-        } catch (Throwable t) {
-            System.out.println(t);
-        }
+
+        response = predictResponse(GCP_PROJECT_ID,GCP_LOCATION,AUTOML_MODEL_ID, imageBase64);
         return response.toString();
     }
 
 
 
-    public static PredictResponse predictResponse(String projectId, String computeRegion, String modelId, String imageBase64) throws IOException {
-        PredictionServiceClient predictionServiceClient = PredictionServiceClient.create();
+    public static PredictResponse predictResponse(String projectId, String computeRegion, String modelId, String imageBase64) {
         try {
-            predictionServiceClient = PredictionServiceClient.create();
+            PredictionServiceClient predictionServiceClient = PredictionServiceClient.create();
             ModelName name = ModelName.of(projectId, computeRegion, modelId);
 
             ByteString content = ByteString.copyFrom(Base64.decodeBase64(imageBase64));
@@ -59,10 +55,9 @@ public class ImageRecognitionService {
 
             System.out.println(response.toString());
             return response;
-
-        }catch (Throwable t){
-          System.out.println(t);
+        } catch (Exception e) {
+            LOG.error("AutoML model invocation error ",e );
+            throw new RuntimeException(e);
         }
-        return null;
     }
 }
