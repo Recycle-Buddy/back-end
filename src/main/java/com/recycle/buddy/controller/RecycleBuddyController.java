@@ -1,6 +1,6 @@
 package com.recycle.buddy.controller;
 
-import com.recycle.buddy.model.Image;
+import com.recycle.buddy.model.input.Image;
 import com.recycle.buddy.service.ImageRecognitionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
