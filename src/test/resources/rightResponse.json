@@ -1,0 +1,6 @@
+payload {
+  classification {
+    score: 0.98274016
+  }
+  display_name: "plastic_film"
+}
