@@ -1,7 +1,7 @@
 package com.recycle.buddy.service;
 
-
 import com.fasterxml.jackson.databind.JsonNode;
+
 import com.google.api.client.util.Base64;
 import com.google.cloud.automl.v1beta1.*;
 
@@ -18,6 +18,11 @@ import org.springframework.stereotype.Service;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Service;
+import java.io.IOException;
+
 import java.util.Map;
 
 
@@ -25,6 +30,7 @@ import java.util.Map;
 public class ImageRecognitionService {
 
     private static final Logger LOG = LoggerFactory.getLogger(ImageRecognitionService.class);
+
 
     private final WasteClassifier wasteClassifier;
 
@@ -53,10 +59,9 @@ public class ImageRecognitionService {
 
         return createResponse(resultList);
     }
-
-
-
+  
     public PredictResponse predictResponse(String projectId, String computeRegion, String modelId, String imageBase64) {
+
         try {
             PredictionServiceClient predictionServiceClient = PredictionServiceClient.create();
             ModelName name = ModelName.of(projectId, computeRegion, modelId);
