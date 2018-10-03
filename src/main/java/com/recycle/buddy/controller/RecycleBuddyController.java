@@ -1,6 +1,8 @@
 package com.recycle.buddy.controller;
 
 import com.recycle.buddy.model.input.Image;
+import com.recycle.buddy.model.input.RecognizeRequest;
+import com.recycle.buddy.model.output.RecognizeResponse;
 import com.recycle.buddy.service.ImageRecognitionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -20,7 +22,7 @@ public class RecycleBuddyController {
     }
 
     @RequestMapping(value = "/recognize", method = RequestMethod.POST)
-    public String recognize(@RequestBody final Image image) {
-        return imageRecognitionService.recognize(image.getImageBytes());
+    public RecognizeResponse recognize(@RequestBody final RecognizeRequest recognizeRequest) {
+        return imageRecognitionService.recognize(recognizeRequest);
     }
 }
