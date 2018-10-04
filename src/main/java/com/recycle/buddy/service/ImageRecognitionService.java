@@ -82,7 +82,10 @@ public class ImageRecognitionService {
     }
 
     private RecognizeResponse createResponse(List<RecognitionResult> resultList){
-        return null;
+
+        RecognizeResponse recognizeResponse = new RecognizeResponse();
+        recognizeResponse.setResult(resultList);
+        return recognizeResponse;
     }
 
     private void printTree(){

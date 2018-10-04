@@ -7,6 +7,7 @@ import com.google.common.io.Resources;
 import com.recycle.buddy.model.output.RecognitionResult;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import org.slf4j.Logger;
@@ -23,7 +24,7 @@ public class WasteClassifier {
         try {
             ObjectMapper mapper = new ObjectMapper();
             root = mapper.readTree(Resources.getResource(TREE));
-            printTree();
+            //printTree();
         } catch (IOException e) {
             LOG.error("Reading tree file error",e );
             throw new RuntimeException(e);
@@ -31,11 +32,20 @@ public class WasteClassifier {
     }
 
     public JsonNode getRoot() {
+
         return root;
     }
 
     public List<RecognitionResult> classify(PredictResponse response) {
-        return null;
+        List<RecognitionResult> results = new ArrayList<>();
+        RecognitionResult result = new RecognitionResult();
+
+        result.setLabel("It is rainy in Seattle today...");
+        result.setProbability(0.99);
+
+        results.add(result);
+
+        return results;
     }
 
 
