@@ -6,7 +6,7 @@
     <groupId>com.recycle.buddy</groupId>
     <artifactId>recycle-buddy-service</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <packaging>pom</packaging>
+    <packaging>jar</packaging>
     <name>recycle-buddy-service</name>
     <description>Recycle buddy service</description>
 
@@ -23,7 +23,6 @@
         <maven.compiler.target>1.8</maven.compiler.target>
         <project.timestamp>${maven.build.timestamp}</project.timestamp>
         <maven.build.timestamp.format>yyyyMMdd-HHmm</maven.build.timestamp.format>
-        <full-artifact-name>target/back-end-1.0.jar</full-artifact-name>
     </properties>
 
     <dependencies>
@@ -72,22 +71,20 @@
     <build>
         <plugins>
             <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
                 <groupId>com.heroku.sdk</groupId>
                 <artifactId>heroku-maven-plugin</artifactId>
-                <version>1.1.1</version>
+                <version>2.0.6</version>
                 <configuration>
-                    <appName>Back-end</appName>
-                    <includeTarget>false</includeTarget>
-                    <includes>
-                        <include>Recycle-Buddy/back-end</include>
-                    </includes>
-                    <jdkVersion>1.8</jdkVersion>
+                    <appName>boiling-tundra-27918</appName>
                     <processTypes>
-                        <web>java $JAVA_OPTS -jar back-end</web>
+                        <web>java -jar target/recycle-buddy-service-1.0-SNAPSHOT.jar --server.port=$PORT</web>
                     </processTypes>
                 </configuration>
             </plugin>
         </plugins>
     </build>
-
 </project>

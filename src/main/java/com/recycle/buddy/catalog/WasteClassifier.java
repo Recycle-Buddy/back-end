@@ -2,15 +2,18 @@ package com.recycle.buddy.catalog;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.google.cloud.automl.v1beta1.AnnotationPayload;
 import com.google.cloud.automl.v1beta1.PredictResponse;
 import com.google.common.io.Resources;
 import com.recycle.buddy.model.output.RecognitionResult;
-
-import java.io.IOException;
-import java.util.LinkedList;
-import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+
 
 public class WasteClassifier {
 
@@ -23,7 +26,7 @@ public class WasteClassifier {
         try {
             ObjectMapper mapper = new ObjectMapper();
             root = mapper.readTree(Resources.getResource(TREE));
-            printTree();
+            //printTree();
         } catch (IOException e) {
             LOG.error("Reading tree file error",e );
             throw new RuntimeException(e);
@@ -31,11 +34,21 @@ public class WasteClassifier {
     }
 
     public JsonNode getRoot() {
+
         return root;
     }
 
     public List<RecognitionResult> classify(PredictResponse response) {
-        return null;
+        List<RecognitionResult> results = new ArrayList<>();
+
+        for (AnnotationPayload annotationPayload : response.getPayloadList()) {
+            RecognitionResult result = new RecognitionResult();
+            result.setLabel(annotationPayload.getDisplayName());
+            result.setProbability(annotationPayload.getClassification().getScore());
+            results.add(result);
+        }
+
+        return results;
     }
 
 
