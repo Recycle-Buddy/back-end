@@ -12,7 +12,7 @@ public class Application {
     @RequestMapping("/")
     @ResponseBody
     String home() {
-        return "Hello World!";
+        return "Hello! This is Recycle Buddy back end service.";
     }
 
     public static void main(final String[] args) {

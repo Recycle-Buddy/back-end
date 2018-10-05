@@ -2,16 +2,18 @@ package com.recycle.buddy.catalog;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.google.cloud.automl.v1beta1.AnnotationPayload;
 import com.google.cloud.automl.v1beta1.PredictResponse;
 import com.google.common.io.Resources;
 import com.recycle.buddy.model.output.RecognitionResult;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+
 
 public class WasteClassifier {
 
@@ -38,12 +40,13 @@ public class WasteClassifier {
 
     public List<RecognitionResult> classify(PredictResponse response) {
         List<RecognitionResult> results = new ArrayList<>();
-        RecognitionResult result = new RecognitionResult();
 
-        result.setLabel("It is rainy in Seattle today...");
-        result.setProbability(0.99);
-
-        results.add(result);
+        for (AnnotationPayload annotationPayload : response.getPayloadList()) {
+            RecognitionResult result = new RecognitionResult();
+            result.setLabel(annotationPayload.getDisplayName());
+            result.setProbability(annotationPayload.getClassification().getScore());
+            results.add(result);
+        }
 
         return results;
     }
