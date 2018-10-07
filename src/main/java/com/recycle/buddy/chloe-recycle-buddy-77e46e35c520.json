@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "chloe-recycle-buddy",
+  "private_key_id": "77e46e35c520b789caef3633a8ceff15acc69982",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDYFufFcqLaOSJE\nt4G9/nxNpGwSgnJlI8nck7AUi4VOI5EyZGd1CSLzTg/pbLmaIMQOyV9VgCjRljG9\nFuvdh7NwjcgmXakkI6ga39HcehKoPZ15UbdiPweMMSl2gaTkmUKXVCmFn4gE30K8\nJkmlckRq72XSRciZ/yHNXWM4u5JIS4FMyvMu355u5VgKMXv9klGW4F+jSrxO2YRw\n1IFacaFZsUL/DRZdKfvSKueJ4nYYUDQP3v4FVdHueiSAdMR5eCOfUIhqOma4GmKp\nlIXoXVdzsFC1kY+0S772gNv/A1SwOJ8B7Gkqc93jCQXY7Z9cJBlG4+P6s1p2uA0j\nFIbLyeuPAgMBAAECggEAAJu75k3m0Hd1tbzQhDDpt6w9U6YDXW6G3HSb+8rSwsAN\n4hbvRaCTdRzkpZMVSK5L7wC5IHv+YWyrUi1014hQxIHZrOX5mmzxRbYYmKbNU6Ts\nwxEsU3367vWaeMdvp+cYjWWCwmoLD3xzayUucuVJ9QUcg8WHhYt21GWtaFT62fI/\nJV1ZI/qu9Om5KqiLEUOon8sxG9/MmbcpKZ+53YNv1z7g+lDjip5uT55usYc8ylpM\ntF5Lyfw244Bb+1PSPP1GMZImcwtbC8ZE01FNBKBNybR7MePq9Z3PwmszrUmnJSIc\nvCe6RQGcLauZps9eB44QanJZyfn7AYMc2IlC38NvYQKBgQDvj+SV35X3Cj4q6/Ur\nvqSHIlJ0pjjI91DssDNkBbR9cfU8p5e4KeIvrl8eHfAnNuZWrUJLUR22wBxXNBOT\nuxkSmL2uHdzIma1j8yzrMDmYXhMPmuPczD1RfHGMG6fBIsPRvaaM+LmEbyh+pWNR\n2n4m7icyUy6iODSaLCkhnNShoQKBgQDm6rJTJIS2hbQ/UfoXn74TXepS9kKMpN97\nm1IKRFzorop1EvXpowPn0kmednLoE+79EL8rB3dp+Jou3ENEbpImv1UUTgYT4O/6\nbhPi+Ogzn/6FRYkjP8nquqJCBvnZOdjjGJ4SrWKttALFEjaUYOlIW9YJTwlA7S2e\ndx4qLdXfLwKBgAIgnwENuUE2YBL1gXnf+YoRrfXHPB3cxGU1s18iBdZPWsQtINXL\n2Wxe+g1EasuOW0FNzJbqo37p+dZ0afAX60MVBCo1ra5CXx3SHQYBqaFGxJiQ4ZEm\nZy0AE+oQnM7ERkTokEAUPWGFszBcu6MQc6pY1xRFVNav9RehaMQZpnHBAoGAJX48\nABXw2nXxI0rbMZTFVv2ru1ayzYVDqB06/+HDuCAG6SVv+kR2sOBLBciztYzvA/YB\nJCptMC6mUi9/WJAfeN0eIlLc18NxE5dl8Td69E7pE5iLwMZtsYgmKlRZovSqi40G\ntX+jgxK0VG01oXfuyMnogdBsbzdTbeRnaG/Sxw8CgYA6EG9N7uQaHMptQ7cdi6Qy\n34vSCJZs5p/uZ4cU+iOUb+/1EX0MGgekMeJz9TkKDEz/CcAyTHIyq/rfojvxd6IG\nsVtMEFgIHD1PMT6NUIZW+JEYliVZCXbOvFn3dE7lDna7at0jI1GIBnKSkZySCobJ\nAthO1c+2sH3k5eCsN6MxSg==\n-----END PRIVATE KEY-----\n",
+  "client_email": "chloe-automl-account@chloe-recycle-buddy.iam.gserviceaccount.com",
+  "client_id": "104362416811975681176",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/chloe-automl-account%40chloe-recycle-buddy.iam.gserviceaccount.com"
+}
