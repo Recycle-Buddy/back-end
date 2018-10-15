@@ -43,12 +43,24 @@ public class WasteClassifier {
 
         for (AnnotationPayload annotationPayload : response.getPayloadList()) {
             RecognitionResult result = new RecognitionResult();
-            result.setLabel(annotationPayload.getDisplayName());
+            result.setLabel(matchLabel(annotationPayload.getDisplayName()));
             result.setProbability(annotationPayload.getClassification().getScore());
             results.add(result);
         }
-
         return results;
+    }
+
+    //for demo presentation
+    private String matchLabel (String displayName){
+        switch (displayName) {
+            case "glass": return "GlassBottlesJars";
+            case "paper": return "PaperTowels";
+            case "metal": return "BeverageCans";
+            case "plastic": return "PlasticBottles";
+            case "trash": return "ChipBags";
+            case "cardboard": return "CardboardBoxes";
+        }
+        return "no label matches";
     }
 
 

@@ -1,6 +1,5 @@
 package com.recycle.buddy.service;
 
-import com.fasterxml.jackson.databind.JsonNode;
 import com.google.api.client.util.Base64;
 import com.google.cloud.automl.v1beta1.*;
 import com.google.protobuf.ByteString;
@@ -14,7 +13,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
@@ -56,16 +54,6 @@ public class ImageRecognitionService {
     public PredictResponse predictResponse(String projectId, String computeRegion, String modelId, String imageBase64) {
 
         try {
-            //trying get GOOGLE credentiols from file
-//            InputStream in = this.getClass().getResourceAsStream("/chloe-recycle-buddy-77e46e35c520.json");
-//
-//            GoogleCredentials credentials = GoogleCredentials.fromStream(in)
-//                    .createScoped(Lists.newArrayList("https://www.googleapis.com/auth/cloud-platform"));
-//
-//
-//            Storage storage = StorageOptions.newBuilder().setCredentials(credentials).build().getService();
-
-
             PredictionServiceClient predictionServiceClient = PredictionServiceClient.create();
             ModelName name = ModelName.of(projectId, computeRegion, modelId);
 
@@ -85,13 +73,12 @@ public class ImageRecognitionService {
     }
 
     private RecognizeResponse createResponse(List<RecognitionResult> resultList){
-
         RecognizeResponse recognizeResponse = new RecognizeResponse();
         recognizeResponse.setResult(resultList);
         return recognizeResponse;
     }
 
-    private void printTree(){
+   /* private void printTree(){
         JsonNode root = wasteClassifier.getRoot();
 
         LinkedList<JsonNode> q = new LinkedList<>();
@@ -110,5 +97,5 @@ public class ImageRecognitionService {
 
             }
         }
-    }
+    }*/
 }
