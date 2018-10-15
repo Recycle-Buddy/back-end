@@ -61,10 +61,12 @@ public class WasteClassifier {
             case "cardboard": return "CardboardBoxes";
         }
         return "no label matches";
-    }
+        }
+
+   }
 
 
-    private void printTree(){
+   /* private void printTree(){
         //JsonNode root = wasteClassifier.getRoot();
 
         LinkedList<JsonNode> q = new LinkedList<>();
@@ -83,5 +85,5 @@ public class WasteClassifier {
 
             }
         }
-    }
+    }*/
 }
