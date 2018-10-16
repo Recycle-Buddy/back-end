@@ -11,7 +11,6 @@ import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
 
 
@@ -26,7 +25,6 @@ public class WasteClassifier {
         try {
             ObjectMapper mapper = new ObjectMapper();
             root = mapper.readTree(Resources.getResource(TREE));
-            //printTree();
         } catch (IOException e) {
             LOG.error("Reading tree file error",e );
             throw new RuntimeException(e);
@@ -62,25 +60,4 @@ public class WasteClassifier {
             default: return "no label matches";
         }
     }
-
-
-  /*  private void printTree(){
-        //JsonNode root = wasteClassifier.getRoot();
-
-        LinkedList<JsonNode> q = new LinkedList<>();
-        q.add(root.get("root"));
-        int k = q.size();
-
-        while (!q.isEmpty()){
-            k = q.size();
-
-            for(int i = 0; i < k; i++){
-                JsonNode node = q.removeFirst();
-                System.out.println(node.toString());
-                q.addAll(node.findValues("children"));
-
-                System.out.println("");
-            }
-        }
-    }*/
 }
