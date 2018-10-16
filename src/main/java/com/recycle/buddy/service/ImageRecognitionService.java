@@ -1,6 +1,6 @@
 package com.recycle.buddy.service;
 
-import com.fasterxml.jackson.databind.JsonNode;
+
 import com.google.api.client.util.Base64;
 import com.google.cloud.automl.v1beta1.*;
 import com.google.protobuf.ByteString;
@@ -14,7 +14,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
@@ -26,7 +25,6 @@ public class ImageRecognitionService {
 
     private static final Logger LOG = LoggerFactory.getLogger(ImageRecognitionService.class);
 
-
     private final WasteClassifier wasteClassifier;
 
     @Autowired
@@ -34,13 +32,6 @@ public class ImageRecognitionService {
         this.wasteClassifier = wasteClassifier;
     }
 
-    /*model parametrs*/
-    //Prashanth's model
-    //private static final String GCP_PROJECT_ID = "recycle-buddy";
-    //private static final String GCP_LOCATION = "us-central1";
-    //private static final String AUTOML_MODEL_ID = "ICN3866551369314271958"; //ICN5772469721644251948
-
-    //Chloe's model
     private static final String GCP_PROJECT_ID = "chloe-recycle-buddy";
     private static final String GCP_LOCATION = "us-central1";
     private static final String AUTOML_MODEL_ID = "ICN2373703841484853385";
@@ -56,15 +47,6 @@ public class ImageRecognitionService {
     public PredictResponse predictResponse(String projectId, String computeRegion, String modelId, String imageBase64) {
 
         try {
-            //trying get GOOGLE credentiols from file
-//            InputStream in = this.getClass().getResourceAsStream("/chloe-recycle-buddy-77e46e35c520.json");
-//
-//            GoogleCredentials credentials = GoogleCredentials.fromStream(in)
-//                    .createScoped(Lists.newArrayList("https://www.googleapis.com/auth/cloud-platform"));
-//
-//
-//            Storage storage = StorageOptions.newBuilder().setCredentials(credentials).build().getService();
-
 
             PredictionServiceClient predictionServiceClient = PredictionServiceClient.create();
             ModelName name = ModelName.of(projectId, computeRegion, modelId);
@@ -85,30 +67,8 @@ public class ImageRecognitionService {
     }
 
     private RecognizeResponse createResponse(List<RecognitionResult> resultList){
-
         RecognizeResponse recognizeResponse = new RecognizeResponse();
         recognizeResponse.setResult(resultList);
         return recognizeResponse;
-    }
-
-    private void printTree(){
-        JsonNode root = wasteClassifier.getRoot();
-
-        LinkedList<JsonNode> q = new LinkedList<>();
-        q.add(root.get("root"));
-        int k = q.size();
-
-        while (!q.isEmpty()){
-            k = q.size();
-
-            for(int i = 0; i < k; i++){
-                JsonNode node = q.removeFirst();
-                System.out.println(node.toString());
-                q.addAll(node.findValues("children"));
-
-                System.out.println("");
-
-            }
-        }
     }
 }

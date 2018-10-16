@@ -11,7 +11,6 @@ import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
 
 
@@ -26,7 +25,6 @@ public class WasteClassifier {
         try {
             ObjectMapper mapper = new ObjectMapper();
             root = mapper.readTree(Resources.getResource(TREE));
-            //printTree();
         } catch (IOException e) {
             LOG.error("Reading tree file error",e );
             throw new RuntimeException(e);
@@ -43,33 +41,23 @@ public class WasteClassifier {
 
         for (AnnotationPayload annotationPayload : response.getPayloadList()) {
             RecognitionResult result = new RecognitionResult();
-            result.setLabel(annotationPayload.getDisplayName());
+            result.setLabel(matchLabel(annotationPayload.getDisplayName()));
             result.setProbability(annotationPayload.getClassification().getScore());
             results.add(result);
         }
-
         return results;
     }
 
-
-    private void printTree(){
-        //JsonNode root = wasteClassifier.getRoot();
-
-        LinkedList<JsonNode> q = new LinkedList<>();
-        q.add(root.get("root"));
-        int k = q.size();
-
-        while (!q.isEmpty()){
-            k = q.size();
-
-            for(int i = 0; i < k; i++){
-                JsonNode node = q.removeFirst();
-                System.out.println(node.toString());
-                q.addAll(node.findValues("children"));
-
-                System.out.println("");
-
-            }
+    //for demo presentation
+    private String matchLabel (String displayName){
+        switch (displayName) {
+            case "glass": return "GlassBottlesJars";
+            case "paper": return "PaperTowels";
+            case "metal": return "BeverageCans";
+            case "plastic": return "PlasticBottles";
+            case "trash": return "ChipBags";
+            case "cardboard": return "CardboardBoxes";
+            default: return "no label matches";
         }
     }
 }

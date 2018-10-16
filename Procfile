@@ -1,1 +1,1 @@
-web: java -jar target/recycle-buddy-service-1.0-SNAPSHOT.jar -Dserver.port=$PORT
+web: java -jar target/recycle-buddy-service-1.0-SNAPSHOT.jar --server.port=$PORT
