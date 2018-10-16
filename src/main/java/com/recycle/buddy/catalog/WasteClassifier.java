@@ -11,7 +11,6 @@ import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
 
 
@@ -59,12 +58,12 @@ public class WasteClassifier {
             case "plastic": return "PlasticBottles";
             case "trash": return "ChipBags";
             case "cardboard": return "CardboardBoxes";
+            default: return "no label matches";
         }
-        return "no label matches";
     }
 
 
-    private void printTree(){
+  /*  private void printTree(){
         //JsonNode root = wasteClassifier.getRoot();
 
         LinkedList<JsonNode> q = new LinkedList<>();
@@ -80,8 +79,7 @@ public class WasteClassifier {
                 q.addAll(node.findValues("children"));
 
                 System.out.println("");
-
             }
         }
-    }
+    }*/
 }
