@@ -1,5 +1,7 @@
 package com.recycle.buddy.service;
 
+
+import com.fasterxml.jackson.databind.JsonNode;
 import com.google.api.client.util.Base64;
 import com.google.cloud.automl.v1beta1.*;
 import com.google.protobuf.ByteString;
@@ -54,6 +56,7 @@ public class ImageRecognitionService {
     public PredictResponse predictResponse(String projectId, String computeRegion, String modelId, String imageBase64) {
 
         try {
+
             PredictionServiceClient predictionServiceClient = PredictionServiceClient.create();
             ModelName name = ModelName.of(projectId, computeRegion, modelId);
 
