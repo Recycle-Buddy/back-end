@@ -1,0 +1,10 @@
+/Users/genepieterson/projects/recycle-buddy/back-end/src/main/java/com/recycle/buddy/Application.java
+/Users/genepieterson/projects/recycle-buddy/back-end/src/main/java/com/recycle/buddy/config/RecycleBuddyConfiguration.java
+/Users/genepieterson/projects/recycle-buddy/back-end/src/main/java/com/recycle/buddy/controller/RecycleBuddyController.java
+/Users/genepieterson/projects/recycle-buddy/back-end/src/main/java/com/recycle/buddy/model/input/RecognizeRequest.java
+/Users/genepieterson/projects/recycle-buddy/back-end/src/main/java/com/recycle/buddy/model/output/Error.java
+/Users/genepieterson/projects/recycle-buddy/back-end/src/main/java/com/recycle/buddy/model/output/RecognitionResult.java
+/Users/genepieterson/projects/recycle-buddy/back-end/src/main/java/com/recycle/buddy/model/input/Image.java
+/Users/genepieterson/projects/recycle-buddy/back-end/src/main/java/com/recycle/buddy/service/ImageRecognitionService.java
+/Users/genepieterson/projects/recycle-buddy/back-end/src/main/java/com/recycle/buddy/catalog/WasteClassifier.java
+/Users/genepieterson/projects/recycle-buddy/back-end/src/main/java/com/recycle/buddy/model/output/RecognizeResponse.java

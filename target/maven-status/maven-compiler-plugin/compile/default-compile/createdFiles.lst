@@ -1,0 +1,10 @@
+com/recycle/buddy/catalog/WasteClassifier.class
+com/recycle/buddy/Application.class
+com/recycle/buddy/model/output/RecognizeResponse.class
+com/recycle/buddy/model/output/RecognitionResult.class
+com/recycle/buddy/config/RecycleBuddyConfiguration.class
+com/recycle/buddy/controller/RecycleBuddyController.class
+com/recycle/buddy/model/input/Image.class
+com/recycle/buddy/model/input/RecognizeRequest.class
+com/recycle/buddy/service/ImageRecognitionService.class
+com/recycle/buddy/model/output/Error.class
